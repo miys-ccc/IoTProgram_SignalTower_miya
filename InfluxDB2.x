@@ -1,14 +1,7 @@
-sudo apt update
-sudo apt install -y build-essential zlib1g-dev
+wget https://github.com/influxdata/influxdb/releases/download/v2.7.1/influxdb2-2.7.1_linux_arm64.tar.gz
 
-wget https://golang.org/dl/go1.16.5.linux-armv6l.tar.gz
-sudo tar -C /usr/local -xzf go1.16.5.linux-armv6l.tar.gz
-export PATH=$PATH:/usr/local/go/bin
+tar xvfz influxdb2-2.7.1_linux_arm64.tar.gz
 
+cd influxdb2-2.7.1_linux_arm64
 
-git clone https://github.com/influxdata/influxdb.git
-cd influxdb
-
-make
-
-./bin/influxd
+./influxd
