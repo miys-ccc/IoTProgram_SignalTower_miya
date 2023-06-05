@@ -1,8 +1,7 @@
-wget https://dl.influxdata.com/influxdb/releases2/influxdb2-2.7.1-armhf.deb
+wget https://dl.influxdata.com/influxdb/releases/influxdb2_linux_armhf.tar.gz
 
-sudo dpkg -i influxdb2-2.7.1-armhf.deb
+tar xvfz influxdb2_linux_armhf.tar.gz
 
-sudo systemctl start influxdb
+cd influxdb2-2.x.x_linux_armhf
 
-sudo systemctl start influxdb
-
+./influxd
