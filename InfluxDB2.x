@@ -23,7 +23,35 @@ tar -zxvf grafana-x.x.x.linux-armv7.tar.gz
 
 cd grafana-x.x.x
 
-./bin/grafana-server
+sudo cp bin/grafana-server /usr/local/bin/
+
+sudo cp conf/defaults.ini /etc/grafana/
+
+sudo mkdir -p /var/lib/grafana
+
+sudo apt install -y libfontconfig1
+
+sudo nano /etc/systemd/system/grafana.service
+
+[Unit]
+Description=Grafana
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=pi
+Group=pi
+Type=simple
+WorkingDirectory=/usr/local/bin
+ExecStart=/usr/local/bin/grafana-server --config=/etc/grafana/defaults.ini --homepath=/usr/local/share/grafana --packaging=deb
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl enable grafana.service
+sudo systemctl start grafana.service
+
 
 http://localhost:3000/
 
