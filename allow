@@ -1,0 +1,22 @@
+sudo iptables -L
+
+
+
+
+
+
+
+sudo ufw allow 8086
+
+sudo iptables -A INPUT -p tcp --dport 8086 -j ACCEPT
+
+sudo ufw reload
+
+sudo iptables-save | sudo tee /etc/iptables/rules.v4
+
+
+
+sudo iptables -A INPUT -p tcp --dport 8086 -j ACCEPT
+
+sudo iptables-save | sudo tee /etc/iptables/rules.v4
+
