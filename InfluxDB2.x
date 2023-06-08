@@ -26,3 +26,4 @@ sudo systemctl start grafana-server
 
 sudo systemctl enable grafana-server
 
+http://localhost:3000/
