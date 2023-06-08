@@ -14,16 +14,16 @@ cd influxdb2-2.7.1_linux_arm64
 
 ■Grafana
 
-wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+https://grafana.com/grafana/download?platform=linux
 
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
 
-sudo apt update
 
-sudo apt install -y grafana
+展開
+tar -zxvf grafana-x.x.x.linux-armv7.tar.gz
 
-sudo systemctl start grafana-server
+cd grafana-x.x.x
 
-sudo systemctl enable grafana-server
+./bin/grafana-server
 
 http://localhost:3000/
+
