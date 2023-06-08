@@ -11,6 +11,14 @@ cd influxdb2-2.7.1_linux_arm64
 
 ./influxd
 
+■docker
+sudo docker run -d -p 8086:8086 --name=influxdb influxdb:latest
+
+sudo docker ps
+
+sudo docker exec -it influxdb influx
+
+
 
 ■Grafana
 
