@@ -17,6 +17,10 @@ cd influxdb2-2.7.1_linux_arm64
 https://grafana.com/grafana/download?platform=linux
 
 
+sudo docker run -d -p 3000:3000 --name=grafana grafana/grafana:latest
+
+
+
 
 展開
 tar -zxvf grafana-x.x.x.linux-armv7.tar.gz
