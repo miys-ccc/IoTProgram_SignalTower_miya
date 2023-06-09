@@ -1,0 +1,6 @@
+wget https://dl.influxdata.com/influxdb/releases2/influxdb2_2.0.7_arm64.deb
+sudo dpkg -i influxdb2_2.0.7_arm64.deb
+
+sudo systemctl start influxdb
+
+sudo systemctl status influxdb
