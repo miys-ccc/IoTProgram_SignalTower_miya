@@ -1,6 +1,2 @@
-wget https://dl.influxdata.com/influxdb/releases2/influxdb2_2.0.7_arm64.deb
-sudo dpkg -i influxdb2_2.0.7_arm64.deb
-
-sudo systemctl start influxdb
-
-sudo systemctl status influxdb
+docker pull influxdb:2.7.1
+This version is ready for Docker upgrade from 1.x to 2.x. See docs: https://docs.influxdata.com/influxdb/v2.0/upgrade/v1-to-v2/docker
