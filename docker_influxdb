@@ -3,3 +3,5 @@ docker run -p 8086:8086 \
   -v influxdb-config:/root/.influxdbv2 \
   --name=influxdb2 \
   quay.io/influxdb/influxdb:v2.0.10
+
+docker run -p 8086:8086 -v influxdb:/var/lib/influxdb2 -v influxdb-config:/root/.influxdbv2 --name=influxdb2 quay.io/influxdb/influxdb:v2.0.10
