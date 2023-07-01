@@ -22,3 +22,15 @@ WantedBy=multi-user.target
 sudo systemctl enable tightvncserver
 
 sudo systemctl start tightvncserver
+
+---------------
+
+
+
+sudo nano /etc/rc.local
+
+su - <ユーザー名> -c "/usr/bin/tightvncserver :1"
+
+sudo reboot
+
+
