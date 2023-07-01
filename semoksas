@@ -1,2 +1,20 @@
-git clone https://github.com/karaage0703/raspberry-pi-setup && cd raspberry-pi-setup
-./setup-tightvncserver.sh
+sudo nano /etc/systemd/system/tightvncserver.service
+
+
+[Unit]
+Description=TightVNC Server
+After=sshd.service
+
+[Service]
+ExecStart=/usr/bin/tightvncserver :1
+User=pi
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
+
+
+sudo systemctl enable tightvncserver.service
+
+
+sudo reboot
