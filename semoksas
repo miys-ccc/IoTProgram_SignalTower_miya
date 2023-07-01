@@ -17,7 +17,8 @@ RestartSec=3
 WantedBy=multi-user.target
 
 
-sudo systemctl enable tightvncserver.service
 
 
-sudo reboot
+sudo systemctl enable tightvncserver
+
+sudo systemctl start tightvncserver
