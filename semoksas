@@ -6,7 +6,7 @@ Description=TightVNC Server
 After=sshd.service
 
 [Service]
-ExecStart=/usr/bin/tightvncserver :５９０１
+ExecStart=/usr/bin/tightvncserver :5901
 User=pi
 Type=forking
 
