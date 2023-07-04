@@ -9,11 +9,27 @@ sudo nano /etc/rc.local
 
 /home/pi/influxdb-start.sh &
 
+==================================
+
+sudo nano /etc/systemd/system/influxdb.service
 
 
+[Unit]
+Description=InfluxDB 2.0
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /home/pi/start-influxdb.sh
+
+[Install]
+WantedBy=default.target
+
+sudo systemctl enable influxdb.service
 
 
-
+上記の場合、
+sudo nano /etc/rc.local
+をコメントアウト
 
 
 
