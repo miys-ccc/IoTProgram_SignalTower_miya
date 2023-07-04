@@ -26,6 +26,10 @@ WantedBy=default.target
 
 sudo systemctl enable influxdb.service
 
+sudo systemctl start influxdb
+sudo systemctl status influxdb
+
+
 
 上記の場合、
 sudo nano /etc/rc.local
