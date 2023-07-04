@@ -1,0 +1,22 @@
+sudo nano influxdb-start.sh
+
+#!/bin/bash
+/home/pi/influxdb2-2.x.x_linux_arm64/influxd
+
+sudo chmod +x influxdb-start.sh
+
+sudo nano /etc/rc.local
+
+/home/pi/influxdb-start.sh &
+
+
+
+
+
+
+
+
+
+
+
+
